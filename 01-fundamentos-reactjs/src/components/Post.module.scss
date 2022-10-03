@@ -52,6 +52,7 @@
 		p {
 			margin-top: 1rem;
 		}
+
 		a {
 			font-weight: 700;
 			color: var(--green-500);
@@ -59,6 +60,72 @@
 		}
 		a:hover {
 			color: var(--green-300);
+		}
+	}
+
+	.commentForm {
+		width: 100%;
+
+		margin-top: 1.5rem;
+		padding-top: 1.5rem;
+
+		border-top: 1px solid var(--gray-600);
+
+		> strong {
+			line-height: 1.6;
+			color: var(--gray-100);
+		}
+
+		textarea {
+			transition: outline 0.3s;
+
+			width: 100%;
+			height: 6rem;
+
+			margin-top: 1rem;
+			padding: 1rem;
+			resize: none;
+
+			background: var(--gray-900);
+
+			color: var(--gray-100);
+			line-height: 1.4;
+
+			border: 0;
+			border-radius: 8px;
+		}
+		textarea:focus,
+		textarea:hover {
+			outline: 1px solid var(--green-300);
+		}
+
+		footer {
+			visibility: hidden;
+			max-height: 0;
+
+			button[type="submit"] {
+				transition: background-color 0.1s;
+
+				padding: 1rem 1.5rem;
+				margin-top: 1rem;
+
+				border: 0;
+				border-radius: 8px;
+
+				font-weight: 700;
+				background: var(--green-500);
+				color: var(--white);
+				cursor: pointer;
+			}
+			button[type="submit"]:hover {
+				background: var(--green-300);
+			}
+		}
+	}
+	.commentForm:focus-within {
+		footer {
+			visibility: visible;
+			max-height: none;
 		}
 	}
 }

@@ -8,6 +8,7 @@ export function Post(props) {
 					<img
 						className={styles.avatar}
 						src="http://guthub.com/PeterBarboza.png"
+						loading="lazy"
 					/>
 					<div className={styles.authorInfo}>
 						<strong>Pedro barboza</strong>
@@ -37,6 +38,16 @@ export function Post(props) {
 					<a href="#">#rocketseat</a>{" "}
 				</p>
 			</div>
+
+			<form className={styles.commentForm}>
+				<strong>Deixe seu feedback</strong>
+
+				<textarea placeholder="Deixe um comentário"></textarea>
+
+				<footer>
+					<button type="submit">Publicar</button>
+				</footer>
+			</form>
 		</article>
 	)
 }
