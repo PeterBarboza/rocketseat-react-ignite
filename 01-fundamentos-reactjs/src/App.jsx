@@ -5,6 +5,8 @@ import { Post } from "./components/Post"
 import "./global.scss"
 import styles from "./App.module.scss"
 
+const posts = [{}, {}, {}]
+
 function App() {
 	return (
 		<div>
@@ -14,9 +16,9 @@ function App() {
 				<Sidebar />
 
 				<main>
-					<Post />
-					<Post />
-					<Post />
+					{posts.map(() => (
+						<Post />
+					))}
 				</main>
 			</div>
 		</div>
