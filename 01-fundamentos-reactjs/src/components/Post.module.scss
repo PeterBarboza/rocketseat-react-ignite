@@ -128,8 +128,38 @@
 			max-height: none;
 		}
 	}
+
+	.commentList {
+		margin-top: 2rem;
+	}
 }
 
 .post + .post {
 	margin-top: 2rem;
+}
+
+@media (max-width: 400px) {
+	.post {
+		padding: 1.75rem 1.5rem;
+
+		> header {
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1rem;
+
+			.author {
+				align-self: flex-start;
+			}
+
+			time {
+				align-self: flex-end;
+			}
+		}
+	}
+}
+@media (max-width: 300px) {
+	.post {
+		padding: 1.5rem 1rem;
+	}
 }
