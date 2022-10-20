@@ -13,12 +13,12 @@ interface Author {
 	role: string
 }
 
-interface PostContent { 
+export interface PostContent { 
 	type: "paragraph" | "link",
 	content: string
 }
 
-interface PostProps {
+export interface PostProps {
 	author: Author
 	publishedAt: Date
 	content: PostContent[]

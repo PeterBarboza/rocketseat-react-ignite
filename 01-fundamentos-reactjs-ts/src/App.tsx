@@ -1,6 +1,6 @@
 import { Header } from "./components/Header"
 import { Sidebar } from "./components/Sidebar"
-import { Post } from "./components/Post"
+import { Post, PostContent } from "./components/Post"
 
 import "./global.scss"
 import styles from "./App.module.scss"
@@ -36,7 +36,6 @@ const posts = [
 	},
 ]
 
-
 function App() {
 	return (
 		<div>
@@ -50,7 +49,7 @@ function App() {
 						<Post 
 							key={item.id}
 							author={item.author}
-							content={item.content}
+							content={item.content as PostContent[]}
 							publishedAt={item.publishedAt}
 						/>
 					))}
