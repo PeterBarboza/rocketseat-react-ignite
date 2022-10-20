@@ -7,13 +7,32 @@ import styles from "./App.module.scss"
 
 const posts = [
 	{
+		id: 1,
 		author: {
-			avatarUrl: "http://guthub.com/PeterBarboza.png",
-			name: "Joca Barboza",
+			avatarUrl: "http://github.com/Diego3g.png",
+			name: "Diego Fernandes",
 			role: "Web developer",
 		},
-		content: "",
+		content: [
+			{ type: "paragraph", content: "Fala galeraa 👋" },
+			{ type: "paragraph", content: "Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀" },
+			{ type: "link", content: "jane.design/doctorcare" }
+		],
 		publishedAt: new Date("10/10/2022 20:00:00"),
+	},
+	{
+		id: 2,
+		author: {
+			avatarUrl: "http://github.com/braydevkin.png",
+			name: "Brayan Quirino",
+			role: "Web developer",
+		},
+		content: [
+			{ type: "paragraph", content: "Fala galeraa 👋" },
+			{ type: "paragraph", content: "Acabei de subir mais um projeto no meu portifólio. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",},
+			{ type: "link", content: "jane.design/doctorcare" }
+		],
+		publishedAt: new Date("10/19/2022 18:00:00"),
 	},
 ]
 
@@ -27,9 +46,9 @@ function App() {
 				<Sidebar />
 
 				<main>
-					{posts.map((item, index) => (
+					{posts.map((item) => (
 						<Post 
-							key={index}
+							key={item.id}
 							author={item.author}
 							content={item.content}
 							publishedAt={item.publishedAt}
