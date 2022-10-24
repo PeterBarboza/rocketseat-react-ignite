@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const LayoutContainer = styled.div`
+  min-height: calc(100vh - 10rem);
+  height: fit-content;
   max-width: 74rem;
-  height: calc(100vh - 10rem);
-  min-height: fit-content;
 
   margin: 5rem auto;
   padding: 2.5rem;
